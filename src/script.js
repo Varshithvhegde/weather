@@ -14,6 +14,7 @@ function showPosition(position) {
     getName(latitude, longitude)
 }
 async function getName(latitude, longitude) {
+    //api key to fetch lat and long
     var access_key = 'fc3a65fc9ebd7761b6cd0379e6cb3775'
     var url = `https://api.openweathermap.org/geo/1.0/reverse?lat=` + latitude + `&lon=` + longitude + `&limit=5&appid=` + access_key;
     var res = await fetch(url);
